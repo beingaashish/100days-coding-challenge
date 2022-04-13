@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+	font-family: inherit;
+}
+
+:root {
+	--success-color: #27ae60;
+	--error-color: #eb5757;
+	--primary-color: #0af;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: 'Lora', serif;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fafafa;
+}
+
+.form {
+	padding: 50px;
+	border-radius: 4px;
+	box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.2);
+	max-width: 480px;
+	width: 100%;
+}
+
+.form-heading {
+	margin-top: 0;
+	text-align: center;
+	margin-bottom: 35px;
+}
+
+.form-control {
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+input, label {
+	display: block;
+	width: 100%;
+	border-radius: 0;
+}
+
+label {
+	font-size: .8rem;
+	color: #333;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+input {
+	outline: none;
+	font-size: inherit;
+	border: 1px solid #aaa;
+	margin: 0.3em 0;
+	padding: 0.5em;
+	border-radius: 4px;
+	transition: all .2s ease-in;
+}
+
+input:hover {
+	background: #f3f3f3;
+}
+
+input:focus {
+	border-color: var(--primary-color);
+	box-shadow: 0 0 5px 0 var(--primary-color);
+}
+
+.form-control.success input {
+	border-color: var(--success-color);
+}
+
+.form-control.success input:focus {
+	border-color: var(--success-color);
+	box-shadow: 0 0 5px 0 var(--success-color);
+}
+
+.form-control.error input {
+	border-color: var(--error-color);
+}
+
+.form-control.error input:focus {
+	border-color: var(--error-color);
+	box-shadow: 0 0 5px 0 var(--error-color);
+}
+
+.error-text {
+	position: absolute;
+	visibility: hidden;
+	color: var(--error-color);
+	font-size: .8rem;
+	bottom: 0;
+	left: 0;
+}
+
+.form-control.error .error-text {
+	visibility: visible;
+}
+
+.btn {
+	display: block;
+	background-color: var(--primary-color);
+	color: #fff;
+	width: 100%;
+	border: none;
+	font-size: 1rem;
+	padding: .75em;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	margin-top: 20px;
+	border: solid 1px var(--primary-color);
+	transition: all .2s ease-in;
+}
+
+.btn:hover,
+.btn:focus {
+	box-shadow: 0 0 5px 0 var(--primary-color);
+}
+
