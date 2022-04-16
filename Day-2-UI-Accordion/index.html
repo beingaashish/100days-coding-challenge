@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UI Accordion</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<ul class="accordion">
+		<li class="accordion-item">
+			<h2 class="accordion-item__title">
+				<button class="accordion-item__button" data-target="#accordion-item-content-1">
+					What is Web Development?
+				</button>
+			</h2>
+			<div class="accordion-item__body" id="accordion-item-content-1">
+				<div class="accordion-item__content">
+					Web development is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.
+				</div>
+			</div>
+		</li>
+
+		<li class="accordion-item">
+			<h2 class="accordion-item__title">
+				<button class="accordion-item__button" data-target="#accordion-item-content-2">
+					What is Front-end Development?
+				</button>
+			</h2>
+			<div class="accordion-item__body" id="accordion-item-content-2">
+				<div class="accordion-item__content">
+					Front-end web development is the development of the graphical user interface of a website, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that website.
+				</div>
+			</div>
+		</li>
+
+		<li class="accordion-item">
+			<h2 class="accordion-item__title">
+				<button class="accordion-item__button" data-target="#accordion-item-content-3">
+					What is Back-end Development?
+				</button>
+			</h2>
+			<div class="accordion-item__body" id="accordion-item-content-3">
+				<div class="accordion-item__content">
+					The backend (or “server-side”) is the portion of the website you don't see. It's responsible for storing and organizing data, and ensuring everything on the client-side actually works. The backend communicates with the frontend, sending and receiving information to be displayed as a web page.
+				</div>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>

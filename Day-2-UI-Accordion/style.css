@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+:root {
+	--color-text: #212529;
+	--box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+	--color-primary: #0af;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--color-text);
+}
+
+.accordion {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	max-width: 680px;
+	width: 100%;
+}
+
+.accordion-item {
+	border-radius: 4px;
+	box-shadow: var(--box-shadow);
+}
+
+.accordion-item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.accordion-item:first-of-type .accordion-item__button {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.accordion-item:last-of-type {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.accordion-item__title {
+	margin: 0;
+}
+
+.accordion-item__button {
+	display: flex;
+	outline: none;
+	width: 100%;
+	border: none;
+	font-size: 16px;
+	font-family: inherit;
+	font-weight: 600;
+	color: inherit;
+	cursor: pointer;
+	padding: 1em 1.25em;
+	background-color: #eee;
+	border: solid 1px transparent;
+}
+
+.accordion-item__button:hover {
+	background-color: #ddd;
+}
+
+.accordion-item__button:focus {
+	background-color: #ddd;
+	border-color: var(--color-primary);
+	box-shadow: 0 0 5px 0 var(--color-primary);
+}
+
+.accordion-item__button::after {
+	content: "\002B";
+	margin-left: auto;
+}
+
+.accordion-item.active .accordion-item__button::after {
+	content: "\2212";
+}
+
+.accordion-item__body {
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height .2s ease;
+}
+
+.accordion-item__content {
+	padding: 1em 1.25em;
+}
